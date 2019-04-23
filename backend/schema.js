@@ -5,6 +5,7 @@ const {
   GraphQLInt,
   GraphQLBoolean,
   GraphQLString,
+  GraphQLList,
 } = require('graphql');
 
 // Launch Type
@@ -40,6 +41,13 @@ const RootQuery = new GraphQLObjectType({
       },
       resolve(parent, args) {
         return axios.get(`https://api.spacexdata.com/v3/launches/${args.flight_number}`)
+          .then(({ data }) => data);
+      }
+    },
+    launches: {
+      type: new GraphQLList(LaunchType),
+      resolve(parent) {
+        return axios.get('https://api.spacexdata.com/v3/launches/')
           .then(({ data }) => data);
       }
     }
