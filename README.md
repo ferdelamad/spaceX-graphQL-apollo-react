@@ -1,6 +1,6 @@
 # spaceX Launches 🚀
 
-This is a FERN-stack app to programatically send responsively-designed emails with nodemailer + mjml templates
+This is a demo app to show `spaceX` Launches and Rockets information.
 
 ## Development
 
