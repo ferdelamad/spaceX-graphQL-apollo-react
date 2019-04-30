@@ -20,5 +20,6 @@
   "homepage": "https://github.com/ferdelamad/spaceX-graphQL-apollo-react#readme",
   "devDependencies": {
     "concurrently": "^4.1.0"
-  }
+  },
+  "dependencies": {}
 }
